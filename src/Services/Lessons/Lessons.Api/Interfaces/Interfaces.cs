@@ -1,6 +1,6 @@
 namespace Lessons.Api.Interfaces
 {
-    public interface IBaseInterface<T>
+    public interface IBaseRepository<T>
     {
         Task<T?> Get(Guid id);
         Task<IEnumerable<T>> GetAll();
@@ -8,7 +8,7 @@ namespace Lessons.Api.Interfaces
         Task<T?> Delete(Guid id);
         Task<T?> Update(T item);
     }
-    public interface ICategoriesRepository : IBaseInterface<Category> { }
-    public interface ILessonsRepository : IBaseInterface<Lesson> { }
-    public interface IAlternativesRepository : IBaseInterface<Alternative> { }
+    public interface ICategoriesRepository : IBaseRepository<Category> { }
+    public interface ILessonsRepository : IBaseRepository<Lesson> { }
+    public interface IAlternativesRepository : IBaseRepository<Alternative> { }
 }

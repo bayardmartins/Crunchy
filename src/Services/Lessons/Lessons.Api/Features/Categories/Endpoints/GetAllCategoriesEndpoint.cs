@@ -19,6 +19,7 @@ namespace Lessons.Api.Features.Categories.Endpoints
             Verbs(Http.GET);
             Routes("category");
             AllowAnonymous();
+            DontThrowIfValidationFails();
             Describe(x => x.Produces<CategoryResponse>(200, "application/json"));
         }
 

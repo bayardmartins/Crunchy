@@ -19,10 +19,12 @@ namespace Lessons.Api.Features.Lessons.Endpoints
             Verbs(Http.GET);
             Routes("lesson");
             AllowAnonymous();
-            Describe(x => x.Produces<LessonsResponse>(200, "application/json"));
+            DontThrowIfValidationFails();
+            Describe(x => x
+                .Produces<LessonsResponse>(200, "application/json"));
         }
 
-        public override async Task HandleAsync(LessonRequest req,CancellationToken ct)
+        public override async Task HandleAsync(LessonRequest req, CancellationToken ct)
         {
             IEnumerable<Lesson> lessons = await _repository.GetAll();
             LessonsResponse response = new LessonsResponse

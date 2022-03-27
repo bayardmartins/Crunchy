@@ -19,6 +19,7 @@ namespace Lessons.Api.Features.Alternatives.Endpoints
             Verbs(Http.GET);
             Routes("alternative");
             AllowAnonymous();
+            DontThrowIfValidationFails();
             Describe(x => x.Produces<AlternativeResponse>(200, "application/json"));
         }
 

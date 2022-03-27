@@ -19,7 +19,7 @@ namespace Lessons.Api.Features.Categories.Endpoints
             Routes("category");
             AllowAnonymous();
             Describe(x => x
-                .Accepts<CategoryRequest>("application/json+custom")
+                .Accepts<CategoryRequest>("application/json")
                 .Produces<CategoryRequest>(200, "application/json"));
         }
 

@@ -19,12 +19,13 @@ namespace Lessons.Api.Features.Alternatives.Endpoints
             Routes("alternative");
             AllowAnonymous();
             Describe(x => x
-                .Accepts<AlternativeRequest>("application/json+custom")
+                .Accepts<AlternativeRequest>("application/json")
                 .Produces<AlternativeRequest>(200, "application/json"));
         }
 
         public override async Task HandleAsync(AlternativeRequest req,CancellationToken ct)
         {
+            req.Id = Guid.NewGuid();
             Alternative requestedAlternative = Map.ToEntity(req);
             Alternative alternative = await _repository.Add(requestedAlternative);
             AlternativeResponse response = Map.FromEntity(alternative);

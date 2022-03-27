@@ -19,7 +19,7 @@ namespace Lessons.Api.Features.Lessons.Endpoints
             Routes("lesson");
             AllowAnonymous();
             Describe(x => x
-                .Accepts<LessonRequest>("application/json+custom")
+                .Accepts<LessonRequest>("application/json")
                 .Produces<LessonsResponse>(200, "application/json"));
         }
 

@@ -11,14 +11,13 @@ namespace Lessons.Api.Features.Categories.Mappers
             {
                 Id = e.Id,
                 Description = e.Description,
-                LessonList = e.LessonList,
             };
         }
 
         public override Category ToEntity(CategoryRequest r) => new()
         {
+            Id = r.Id,
             Description = r.Description,
-            LessonList = r.LessonList,
         };
     }
 }

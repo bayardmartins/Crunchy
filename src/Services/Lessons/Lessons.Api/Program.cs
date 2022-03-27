@@ -10,7 +10,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<LessonsApiContext>(options => options.UseNpgsql(connectionString));
-builder.Services.AddScoped<ILessonsRepository,LessonsRepository>();
+builder.Services.AddScoped<ILessonsRepository, LessonsRepository>();
+builder.Services.AddScoped<IAlternativesRepository, AlternativesRepository>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSwaggerDoc();
 builder.Services.AddFastEndpoints();
 

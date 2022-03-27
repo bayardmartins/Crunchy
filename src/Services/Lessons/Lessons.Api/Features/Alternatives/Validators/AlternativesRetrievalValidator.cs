@@ -7,9 +7,9 @@ namespace Lessons.Api.Features.Alternatives.Validators
     {
         public AlternativesRetrievalValidator()
         {
-            RuleFor(x => x.Description).NotEmpty().WithMessage("Description is required");
+            RuleFor(x => x.Description).MinimumLength(5).WithMessage("Description`s minimum lenght is 5");
+            RuleFor(x => x.Description).MaximumLength(125).WithMessage("Description's maximum lenght is 125");
             RuleFor(x => x.IsRightAnswer).NotNull().WithMessage("IsRightAnswer is required");
-            RuleFor(x => x.Lesson).NotNull().WithMessage("Lesson is required");
         }
     }
 }

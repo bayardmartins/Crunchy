@@ -4,6 +4,7 @@ namespace Lessons.Api.Features.Lessons.Contracts.Responses
     {
         public Guid Id { get; set; }
         public Level Level { get; set; }
-        public List<Alternative> Alternatives { get; set; }
+        public string Question { get; set; }
+        public Guid IdCategory { get; set; }
     }
 }

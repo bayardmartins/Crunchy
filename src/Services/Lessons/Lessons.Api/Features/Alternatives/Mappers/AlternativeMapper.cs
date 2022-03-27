@@ -12,15 +12,16 @@ namespace Lessons.Api.Features.Alternatives.Mappers
                 Id = e.Id,
                 Description = e.Description,
                 IsRightAnswer = e.IsRightAnswer,
-                Lesson = e.Lesson,
+                IdLesson = e.IdLesson
             };
         }
 
         public override Alternative ToEntity(AlternativeRequest r) => new()
         {
+            Id = r.Id,
             Description = r.Description,
             IsRightAnswer = r.IsRightAnswer,
-            Lesson = r.Lesson,
+            IdLesson = r.IdLesson
         };
     }
 }

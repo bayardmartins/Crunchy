@@ -11,12 +11,17 @@ namespace Lessons.Api.Features.Lessons.Mappers
             {
                 Id = e.Id,
                 Level = e.Level,
+                Question = e.Question,
+                IdCategory = e.IdCategory
             };
         }
 
         public override Lesson ToEntity(LessonRequest r) => new()
         {
-            Level = r.Level,
+            Id = r.Id,
+            Level = (Level)r.Level,
+            Question = r.Question,
+            IdCategory = r.IdCategory,
         };
     }
 }
