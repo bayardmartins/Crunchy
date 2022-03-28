@@ -1,8 +1,9 @@
+using Lessons.Api.Features.BaseFeature.Contracts.Responses;
+
 namespace Lessons.Api.Features.Alternatives.Contracts.Responses
 {
-    public class AlternativeResponse
+    public class AlternativeResponse : BaseResponse
     {
-        public Guid Id { get; set; }
         public string Description { get; set; }
         public bool IsRightAnswer { get; set; }
         public Guid IdLesson { get; set; }

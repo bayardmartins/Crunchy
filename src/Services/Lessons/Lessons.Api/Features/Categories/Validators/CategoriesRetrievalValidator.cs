@@ -3,7 +3,7 @@ using Lessons.Api.Features.Categories.Contracts.Requests;
 
 namespace Lessons.Api.Features.Categories.Validators
 {
-    public class CategoriesRetrievalValidator : Validator<BaseRequest>
+    public class CategoriesRetrievalValidator : Validator<CategoryRequest>
     {
         public CategoriesRetrievalValidator()
         {

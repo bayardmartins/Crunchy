@@ -1,9 +1,10 @@
 using Lessons.Api.Features.Alternatives.Contracts.Requests;
 using Lessons.Api.Features.Alternatives.Contracts.Responses;
+using Lessons.Api.Features.BaseFeature.Mappers;
 
 namespace Lessons.Api.Features.Alternatives.Mappers
 {
-    public class AlternativeMapper : Mapper<AlternativeRequest, AlternativeResponse, Alternative>
+    public class AlternativeMapper : BaseMapper<Alternative, AlternativeRequest, AlternativeResponse>
     {
         public override AlternativeResponse FromEntity(Alternative e)
         {

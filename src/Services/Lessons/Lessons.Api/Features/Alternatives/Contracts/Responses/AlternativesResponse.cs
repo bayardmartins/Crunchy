@@ -1,7 +1,8 @@
+using Lessons.Api.Features.BaseFeature.Contracts.Responses;
+
 namespace Lessons.Api.Features.Alternatives.Contracts.Responses
 {
-    public class AlternativesResponse
+    public class AlternativesResponse : BasesResponse<AlternativeResponse>
     {
-        public IEnumerable<AlternativeResponse> Alternatives { get; set; }
     }
 }

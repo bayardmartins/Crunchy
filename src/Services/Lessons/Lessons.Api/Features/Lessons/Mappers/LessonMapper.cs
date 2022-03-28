@@ -1,9 +1,10 @@
+using Lessons.Api.Features.BaseFeature.Mappers;
 using Lessons.Api.Features.Lessons.Contracts.Requests;
 using Lessons.Api.Features.Lessons.Contracts.Responses;
 
 namespace Lessons.Api.Features.Lessons.Mappers
 {
-    public class LessonMapper : Mapper<LessonRequest, LessonResponse, Lesson>
+    public class LessonMapper : BaseMapper<Lesson, LessonRequest, LessonResponse>
     {
         public override LessonResponse FromEntity(Lesson e)
         {

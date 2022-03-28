@@ -1,9 +1,10 @@
 using Lessons.Api.Features.Categories.Contracts.Requests;
 using Lessons.Api.Features.Categories.Contracts.Responses;
+using Lessons.Api.Features.BaseFeature.Mappers;
 
 namespace Lessons.Api.Features.Categories.Mappers
 {
-    public class CategoryMapper : Mapper<CategoryRequest, CategoryResponse, Category>
+    public class CategoryMapper : BaseMapper<Category, CategoryRequest, CategoryResponse>
     {
         public override CategoryResponse FromEntity(Category e)
         {

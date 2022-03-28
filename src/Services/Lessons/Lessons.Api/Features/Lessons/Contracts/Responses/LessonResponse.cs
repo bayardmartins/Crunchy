@@ -1,8 +1,9 @@
+using Lessons.Api.Features.BaseFeature.Contracts.Responses;
+
 namespace Lessons.Api.Features.Lessons.Contracts.Responses
 {
-    public class LessonResponse
+    public class LessonResponse : BaseResponse
     {
-        public Guid Id { get; set; }
         public Level Level { get; set; }
         public string Question { get; set; }
         public Guid IdCategory { get; set; }

@@ -1,7 +1,8 @@
+using Lessons.Api.Features.BaseFeature.Contracts.Responses;
+
 namespace Lessons.Api.Features.Categories.Contracts.Responses
 {
-    public class CategoriesResponse
+    public class CategoriesResponse : BasesResponse<CategoryResponse>
     {
-        public IEnumerable<CategoryResponse> Categories { get; set; }
     }
 }
